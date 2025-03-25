@@ -10,11 +10,13 @@
 
         // DB Get Credentials
         public function __construct() {
-            $this->username = getenv('USERNAME');
-            $this->password = getenv('PASSWORD');
-            $this->db_name = getenv('DBNAME');
-            $this->host = getenv('HOST');
-            $this->port = getenv('PORT');
+            $db_url = getenv('DATABASE_URL');
+            $url = parse_url($db_url);
+            $this->host = $url['host'];
+            $this->port = isset($url['port']) ? $url['port'] : 5432;
+            $this->db_name = ltrim($url['path'], '/');
+            $this->username = $url['user'];
+            $this->password = $url['pass'];
         }
 
         // DB Connect
