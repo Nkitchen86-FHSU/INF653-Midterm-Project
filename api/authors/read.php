@@ -22,7 +22,6 @@
     if($num > 0) {
         // Author array
         $authors_arr = array();
-        $authors_arr['data'] = array();
 
         while($row = $result->fetch(PDO::FETCH_ASSOC)) {
             extract($row);

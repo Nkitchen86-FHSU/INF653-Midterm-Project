@@ -1,3 +1,7 @@
+DROP TABLE quotes;
+DROP TABLE authors;
+DROP TABLE categories;
+
 CREATE TABLE authors (
     id SERIAL PRIMARY KEY,
     author VARCHAR(50) NOT NULL UNIQUE
