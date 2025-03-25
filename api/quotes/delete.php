@@ -23,7 +23,9 @@
 
     // Delete quote
     if($quote->delete()) {
-        echo json_encode(['message' => "Quote with ID {$data->id} Deleted"]);
+        echo json_encode(
+            array('id' => $quote->id)
+        );
     } else {
         echo json_encode(['message' => 'Quote Not Deleted']);
     }

@@ -23,7 +23,9 @@
 
     // Delete author
     if($author->delete()) {
-        echo json_encode(['message' => "Author with ID {$data->id} Deleted"]);
+        echo json_encode(
+            array('id' => $author->id)
+        );
     } else {
         echo json_encode(['message' => 'Author Not Deleted']);
     }
