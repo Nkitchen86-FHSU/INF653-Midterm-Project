@@ -19,7 +19,7 @@
     $data = json_decode(file_get_contents("php://input"));
 
     // Validate JSON
-    if (isset($data->cateogry) && !empty($data->category)) {
+    if (isset($data->category) && !empty($data->category)) {
         $category->category = $data->category;
 
         // Create category
