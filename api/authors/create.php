@@ -25,7 +25,7 @@
         // Create author
         if($author->create()) {
             echo json_encode(
-                array('id' => $data->id, 'author' => $author->author)
+                array('id' => $author->id, 'author' => $author->author)
             );
         } else {
             echo json_encode(
