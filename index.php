@@ -1,8 +1,3 @@
-<?php
-    echo '<pre>';
-    print_r(getenv('SITE_URL'));
-    echo '<br>';
-    print_r($_SERVER);
-    echo '</pre>';
-
-    phpinfo();
+<h1>
+<?php echo "My INF653 Midterm Project"?>
+</h1>
